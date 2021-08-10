@@ -1,0 +1,71 @@
+#tablebody{
+    
+    background-color:white;
+    width: 80%;
+}
+#anchorStyle{
+    color: rgb(29, 11, 80);
+    text-decoration-line: none;
+}
+#title{
+    color: rgb(30, 15, 116);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: x-large;
+    padding-top: 10px;
+}
+#scrollText{
+    direction: "left";
+  height: "40px";
+  color: rgb(218, 21, 21);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  padding-top: 13px;
+  /* top: 25px; */
+}
+.table{
+    border: 1px solid black;
+}
+.table th{
+    background-color: rgb(31, 14, 129);
+    color: white;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.low{
+    background-color: rgb(12, 187, 12);
+    color: black;
+}
+.medium{
+    background-color: rgb(255, 193, 100);
+    /* background-color: rgb(253, 158, 80); */
+    /* color: white; */
+}
+.high{
+    /* background-color: rgb(139, 6, 6); */
+    background-color :rgb(189, 25, 25);
+    color: white;
+}
+.filled-high {
+    padding: 1px 10px;
+    border-radius: 100%;
+    background-color: rgb(189, 25, 25);
+  } 
+  .filled-medium {
+    padding: 1px 10px;
+    border-radius: 100%;
+    background-color: rgb(253, 158, 80);
+  } 
+  .filled-low {
+    padding: 1px 10px;
+    border-radius: 100%;
+    background-color: rgb(12, 187, 12);
+  }
+  #colorInd{
+      width: 30%;
+      position: relative;
+      right: -115px;
+  }
