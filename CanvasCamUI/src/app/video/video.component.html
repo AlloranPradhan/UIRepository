@@ -1,0 +1,9 @@
+
+<app-cam (getPicture)="handleImage($event)"></app-cam>
+
+<div class="webcam-image" *ngIf="webcamImage">
+  <img [src]="webcamImage.imageAsDataUrl" />
+</div>
+<div id="video">
+  <video id="video_{{idx}}" class="video-js vjs-default-skin" playsinline></video>
+</div>
