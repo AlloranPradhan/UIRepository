@@ -1,0 +1,43 @@
+<br><br>
+<div id="tablebody" class="container">
+    <div id="title"> Dashboard</div>
+    <div>
+    <marquee id= "scrollText" width=60%>
+        Please follow all the guidelines related to Covid19
+      </marquee>
+      <span id="colorInd">
+        <span class="filled-low"></span>
+        Safe
+        <span class="filled-medium"></span>
+        Warned
+        <span class="filled-high"></span>
+        Risky
+        
+      </span><br><br></div>
+      <div>
+          <button class="btn btn-success" [routerLink] = "['splaces']">Safer Places</button>
+          <!-- <button class="btn btn-warning">Warned Places</button> -->
+          <button class="btn btn-danger" [routerLink]="['highrisk']">High Risk Places</button>
+      </div>
+   <table class="table table-bordered">
+       <thead>
+           <tr>
+               <th *ngFor="let column of headers">{{column}}</th>
+           </tr>
+       </thead>
+       <tbody >
+           <tr *ngFor="let e of data" 
+           [ngClass]="{'low': e.trend < 200, 
+                        'medium': e.trend >= 200 && e.trend < 1000, 
+                        'high': e.trend >= 1000 && e.trend < 80000 }">
+               <td >{{e.state}}</td>
+               <td>{{e.confCase}}</td>
+               <td>{{e.newCase}}</td>
+               <td>{{e.trend}}</td>
+               <td>{{e.lastUpdatedTime | date: 'dd/MM/yyyy h:mm:ss a'}}</td>
+           </tr>
+        
+       </tbody>
+   </table>
+
+</div>
