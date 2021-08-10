@@ -1,0 +1,51 @@
+#places{
+    background-color: white;
+    color: black;
+    
+}
+#mattable{
+    background-color: white;
+    color: black;
+}
+#headStyle{
+    color: rgb(238, 17, 17);
+    text-align: center;
+    font-size: medium;
+}
+#safeStyle{
+    color: rgb(12, 187, 12);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+}
+#warnStyle{
+    color: rgb(253, 158, 80);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+}
+#body{
+    width: 70%;
+    text-align: left;
+    background-color: black;
+}
+#dataStyle{
+    font-weight: 550;
+    /* text-shadow: violet; */
+}
+#cardWarn{
+    background-color: rgb(253, 158, 80);
+}
+
+#placesStyle{
+    text-align: center;
+    background-color: black;
+    /* color: rgb(206, 14, 212); */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: large;
+}
