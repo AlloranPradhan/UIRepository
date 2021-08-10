@@ -1,0 +1,60 @@
+<br>
+
+<div id= "headStyle" width=60%>
+    <b>Adhere to all the rules and regulations and carry sanitizers and wear masks</b>
+</div><br>
+<div id="body" class="container">
+    
+    <h3 id="safeStyle">Safer Places</h3>
+    
+    <div class="card-group">
+        <div class="card bg-success" >
+            <div class="card-body">
+                <div *ngIf="safeState">
+                    <div *ngFor="let e of safeState |slice: 0:(safeState.length/2)">
+                        <button  id="dataStyle" class="btn btn-success" on-click="onSelect(e)">{{e}}</button>
+                        
+                    </div>  
+            </div>
+            </div>       
+        </div>
+        <div class="card bg-success">
+            <div class="card-body">
+                <div *ngIf="safeState">                
+                    <div  *ngFor="let e of safeState | slice: (safeState.length/2):safeState.length" >
+                    <button id="dataStyle" class="btn btn-success" on-click="onSelect(e)">{{e}}</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="placesStyle" class="card">
+        <div class="card-body"> {{item}}
+            <div *ngFor="let t of touristPlaces">{{t}}</div>
+        </div>
+    </div>
+    <h3 id="warnStyle">Warned Places</h3>
+    
+    <div class="card-group">
+        <div class="card" id="cardWarn">
+            <div class="card-body">
+                <div *ngIf="warnState">
+                    <div *ngFor="let e of warnState | slice: 0:(warnState.length/2)">
+                        <button id="dataStyle" class="btn" on-click="onSelect(e)">{{e}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="cardWarn">
+            <div class="card-body">
+                <div *ngIf="warnState">
+                    <div *ngFor="let e of warnState | slice: (warnState.length/2):(warnState.length)">
+                        <button id="dataStyle" class="btn" on-click="onSelect(e)">{{e}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <button id="btnid" class="btn btn-danger" (click)="back()">Go To Dashboard</button> -->
+   
+</div>
