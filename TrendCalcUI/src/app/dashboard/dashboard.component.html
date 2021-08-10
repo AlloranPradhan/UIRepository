@@ -1,0 +1,61 @@
+
+<br><br>
+<div class="container" id="body" >
+    <div id="title"> Covid19 Stats</div>
+    <div>
+    <marquee id= "scrollText" width=60%>
+        Please follow all the guidelines related to Covid19
+      </marquee>
+      <span id="colorInd">
+        <span class="filled-low"></span>
+        Safe
+        <span class="filled-medium"></span>
+        Warned
+        <span class="filled-high"></span>
+        Risky
+        
+      </span><br><br></div>
+      <div>
+          <button class="btn btn-success" [routerLink] = "['splaces']">Safer Places</button>
+          <!-- <button class="btn btn-warning">Warned Places</button> -->
+          <button class="btn btn-danger" [routerLink]="['highrisk']">High Risk Places</button>
+      </div>
+      
+    <table mat-table [dataSource] = "dataSource" id="table" matSort>
+    <!-- State Column -->
+    <ng-container matColumnDef = "state">
+        <th id="theadStyle" mat-header-cell *matHeaderCellDef> STATE/UNION TERRITORY </th>
+        <td mat-cell *matCellDef="let element"> {{element.state}}</td>
+    </ng-container>
+
+    <!-- Total Conf Case Column -->
+    <ng-container matColumnDef= "confCurr">
+        <th id="theadStyle" mat-header-cell *matHeaderCellDef> TOTAL CONFIRMED CASES</th>
+        <td mat-cell *matCellDef="let element">{{element.confCase}}</td>
+    </ng-container>
+
+    <!-- NewCase Column -->
+    <ng-container matColumnDef= "newCurr">
+        <th id="theadStyle" mat-header-cell *matHeaderCellDef > NEW CASE(S)</th>
+        <td mat-cell *matCellDef="let element">{{element.newCase}}</td>
+    </ng-container>
+
+    <!-- Trend Column -->
+    <ng-container matColumnDef= "trend">
+        <th id="theadStyle" mat-header-cell *matHeaderCellDef mat-sort-header> TREND</th>
+        <td mat-cell *matCellDef="let element">{{element.trend}}</td>
+    </ng-container>
+
+    <!-- LastUpdated Time Column -->
+    <ng-container matColumnDef= "lastUpdatedTime">
+        <th id="theadStyle" mat-header-cell *matHeaderCellDef> LAST UPDATED TIME</th>
+        <td mat-cell *matCellDef="let element">{{element.lastUpdatedTime}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'low': row.trend < 400, 
+    'medium': row.trend >= 400 && row.trend < 1200, 
+    'high': row.trend >= 1200 && row.trend < 80000 }"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[6,20,30,40]" showFirstLastButtons="true"></mat-paginator>
+</div>
+<br>
