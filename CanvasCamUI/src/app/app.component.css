@@ -1,0 +1,21 @@
+#body{
+    width: 100%; 
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+
+} 
+
+#body::-webkit-scrollbar {
+    display: none;
+  }
+
+nav{
+    text-align: center;
+}
+#button{
+    font-weight: 500;
+    /* background-color: rgb(87, 87, 216); */
+}

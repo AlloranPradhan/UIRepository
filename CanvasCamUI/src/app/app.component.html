@@ -1,0 +1,18 @@
+
+<div id="body">
+  <nav >
+    <div class="container-fluid">
+      <div >
+        <button class="btn btn-info" id="button" [routerLink]="['/sign']" routerLinkActive="active">Sign</button>&nbsp;
+        <button  class="btn btn-info" id="button" [routerLink]="['/cam']" routerLinkActive="active">Capture</button> 
+        <!-- <button class="btn btn-info" id="button" [routerLink]="['/cam']" routerLinkActive="active" >Shot Photo</button>&nbsp; -->
+      </div>
+    </div>
+  </nav>
+ 
+
+  <!-- <app-video></app-video> -->
+  <div class="container-fluid"> 
+    <router-outlet></router-outlet>
+  </div>
+</div>
