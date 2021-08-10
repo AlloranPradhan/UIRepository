@@ -1,0 +1,13 @@
+
+<h4>{{ title }}</h4>
+<div id="body" class="container">
+  <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+</div>
+<div class="buttons">
+  <button class="btn btn-danger" (click)="clearSignature()">Clear signature pad</button>
+  <button class="btn btn-success" (click)="savePad()">Save signature</button>
+</div>
+
+<div class="signature-image container" *ngIf="signatureImg">
+  <img src='{{signatureImg}}' />
+</div>
