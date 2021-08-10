@@ -1,0 +1,17 @@
+<div id="body">
+  <nav >
+    <div class="container-fluid">
+      <div >
+        <button class="btn btn-info" id="button" [routerLink]="['/home']" routerLinkActive="active" >Home</button>&nbsp;
+        <!-- <button class="btn btn-info" id="button" [routerLink]="['/covidStats']" routerLinkActive="active">Covid19 Stats</button>&nbsp; -->
+        <!-- <button class="btn btn-info" id="button" [routerLink]="['/map']" routerLinkActive="active">Map View</button>&nbsp; -->
+        <button class="btn btn-info" id="button" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</button>&nbsp;
+        <button class="btn btn-info" id="button" [routerLink]="['/contactus']" routerLinkActive="active">Contact Us</button>&nbsp;
+        <button  class="btn btn-info" id="button" [routerLink]="['/about']" routerLinkActive="active">About</button> 
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+</div>
